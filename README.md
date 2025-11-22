@@ -26,7 +26,7 @@ docker build --target dev -t portfolio-dev .
 docker run -p 3000:3000 -v ${PWD}:/app -v /app/node_modules portfolio-dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser.
+Open [http://localhost:3000](http://localhost:3000) on the browser of your choice.
 
 ### Docker Production Build
 
