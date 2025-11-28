@@ -1,27 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  /* CURRENT: TODO: Add the color palette here, refer to the penpot file */
   --background: #181a1b;
-  --white-text-color: white;
+  --primary-color: #f45b5b;
+  --primary-text-color: white;
+  --secondary-text-color: #e9e9e9;
+  --tertiary-text-color: #b2b2b2;
+  --muted-text-color: #848484;
+  --highlighted-text-color: #f2f7a1;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sulphur-point: var(--font-sulphur-point);
+  --color-primary-text: var(--primary-text-color);
+  --color-secondary-text: var(--secondary-text-color);
+  --color-tertiary-text: var(--tertiary-text-color);
+  --color-highlighted-text: var(--highlighted-text-color);
   --font-outfit: var(--font-outfit);
+  --font-sulphur-point: var(--font-sulphur-point);
 }
 
 @media (prefers-color-scheme: dark) {
+  /* TODO: Consider accounting for light-theme users sometime in the future */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #181a1b;
   }
+}
+
+.jumbotron {
+  font-size: 72pt;
+  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 h3 {
+  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 56pt;
+}
+
+h2 {
+  font-size: 40pt;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 16pt;
+  font-weight: 500;
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--font-sulphur-point), Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.body-large {
+  font-size: 16pt;
+  font-weight: 700;
+}
+
+.body-medium {
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.body-small {
+  font-size: 12pt;
+  font-weight: 700;
 }
 
 body {
   background: var(--background);
-  color: var(--white-text-color);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary-text-color);
+  font-family: var(--font-sulphur-point), Arial, Helvetica, sans-serif;
 }

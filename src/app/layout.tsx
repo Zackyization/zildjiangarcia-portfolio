@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Sulphur_Point, Outfit } from "next/font/google";
+import { Navbar } from "@/components/Navbar/Navbar";
+// import { Footer } from "@/components/Footer/Footer";
 import "./globals.css";
 
 const sulphurPoint = Sulphur_Point({
@@ -14,11 +16,6 @@ const outfit = Outfit({
   // Outfit supports weights 100-900, defaults to all
 });
 
-export const metadata: Metadata = {
-  title: "Zildjian Garcia - Budding Frontend Developer",
-  description: "Portfolio website of Zildjian Garcia, a budding frontend developer showcasing projects, skills, and contact information.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +26,11 @@ export default function RootLayout({
       <body
         className={`${sulphurPoint.variable} ${outfit.variable} antialiased`}
       >
-        {children}
+        <div className="min-h-screen flex flex-col">
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          {/* <Footer /> */}
+        </div>
       </body>
     </html>
   );
