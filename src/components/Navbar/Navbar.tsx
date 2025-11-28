@@ -1,11 +1,29 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import { useEffect, useRef, useState } from "react";
 
 export function Navbar() {
+  const [open, setOpen] = useState(false);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
+
+  // lock scroll + escape to close + focus close button
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.body.style.overflow = "hidden";
+    closeBtnRef.current?.focus();
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header className="w-full">
+    <header className="w-full sticky top-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        {/* TODO: Mobile view of the navbar (collapsible style) */}
         <Link
           href="/"
           className="text-sm text-[var(--primary-color)] font-outfit font-bold"
@@ -13,7 +31,8 @@ export function Navbar() {
           Zildjian G.
         </Link>
 
-        <nav className="flex items-center gap-8 text-sm font-outfit font-bold">
+        {/* Desktop nav */}
+        <nav className="hidden sm:flex items-center gap-8 text-sm font-outfit font-bold">
           <Link
             href="/works"
             className="hover:text-white text-[var(--secondary-text-color)]"
@@ -47,7 +66,114 @@ export function Navbar() {
             Email
           </a>
         </nav>
+
+        {/* Mobile burger */}
+        <button
+          type="button"
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+          aria-expanded={open}
+          onClick={() => setOpen(true)}
+          className="sm:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+        >
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+        </button>
+
+        {/* Overlay */}
+        <div
+          className={`fixed inset-0 z-40 bg-black/60 transition-opacity ${
+            open ? "opacity-100" : "pointer-events-none opacity-0"
+          }`}
+          onClick={() => setOpen(false)}
+        />
       </div>
+
+      {/* Right-side drawer */}
+      <aside
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        className={`fixed inset-y-0 right-0 z-50 w-[84%] max-w-xs bg-[var(--background)] p-6 shadow-2xl outline-none transition-transform duration-300 will-change-transform ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between">
+          <button
+            ref={closeBtnRef}
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 cursor-pointer"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6 6l12 12M18 6l-12 12"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <ul className="mt-10 space-y-10">
+          <li>
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              className="block text-5xl font-bold font-outfit leading-none"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/works"
+              onClick={() => setOpen(false)}
+              className="block text-5xl font-bold font-outfit leading-none text-white"
+            >
+              Works
+            </Link>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Zackyization"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+              className="block text-5xl font-bold font-outfit leading-none text-white"
+            >
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/zildjian-aquino-garcia"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+              className="block text-5xl font-bold font-outfit leading-none text-white"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:zildjiangarciaa@gmail.com"
+              onClick={() => setOpen(false)}
+              className="block text-5xl font-bold font-outfit leading-none text-white"
+            >
+              Email
+            </a>
+          </li>
+        </ul>
+      </aside>
     </header>
   );
 }
