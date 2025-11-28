@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
 import { Sulphur_Point, Outfit } from "next/font/google";
 import { Navbar } from "@/components/Navbar/Navbar";
-// import { Footer } from "@/components/Footer/Footer";
+import { Footer } from "@/components/Footer/Footer";
 import "./globals.css";
 
 const sulphurPoint = Sulphur_Point({
@@ -29,7 +28,7 @@ export default function RootLayout({
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">{children}</main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>

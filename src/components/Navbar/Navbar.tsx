@@ -32,7 +32,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden sm:flex items-center gap-8 text-sm font-outfit font-bold">
+        <nav className="hidden sm:flex items-center gap-8 text-sm font-outfit font-bold" role="navigation">
           <Link
             href="/works"
             className={`${styles.navLink} hover:text-white text-[var(--secondary-text-color)]`}
@@ -68,6 +68,7 @@ export function Navbar() {
         </nav>
 
         {/* Mobile burger */}
+        {/* TODO: Replace this with your own custom burger icon design */}
         <button
           type="button"
           aria-label="Open menu"
@@ -128,6 +129,7 @@ export function Navbar() {
               href="/"
               onClick={() => setOpen(false)}
               className="block text-5xl font-bold font-outfit leading-none"
+              role="link"
             >
               Home
             </Link>
@@ -137,6 +139,7 @@ export function Navbar() {
               href="/works"
               onClick={() => setOpen(false)}
               className="block text-5xl font-bold font-outfit leading-none text-white"
+              role="link"
             >
               Works
             </Link>
@@ -148,6 +151,7 @@ export function Navbar() {
               rel="noreferrer"
               onClick={() => setOpen(false)}
               className="block text-5xl font-bold font-outfit leading-none text-white"
+              role="link"
             >
               Github
             </a>
@@ -159,6 +163,7 @@ export function Navbar() {
               rel="noreferrer"
               onClick={() => setOpen(false)}
               className="block text-5xl font-bold font-outfit leading-none text-white"
+              role="link"
             >
               LinkedIn
             </a>
@@ -168,6 +173,7 @@ export function Navbar() {
               href="mailto:zildjiangarciaa@gmail.com"
               onClick={() => setOpen(false)}
               className="block text-5xl font-bold font-outfit leading-none text-white"
+              role="link"
             >
               Email
             </a>

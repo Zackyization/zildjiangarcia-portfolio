@@ -17,6 +17,7 @@
   --color-secondary-text: var(--secondary-text-color);
   --color-tertiary-text: var(--tertiary-text-color);
   --color-highlighted-text: var(--highlighted-text-color);
+  --color-muted-text: var(--muted-text-color);
   --font-outfit: var(--font-outfit);
   --font-sulphur-point: var(--font-sulphur-point);
 }

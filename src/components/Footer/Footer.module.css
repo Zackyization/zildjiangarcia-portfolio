@@ -1,0 +1,145 @@
+.footer {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  column-gap: 46px;
+  align-items: start;
+}
+
+.leftCol {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-outfit);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--primary-text-color);
+}
+
+.email {
+  margin: 0;
+  font-family: var(--font-outfit);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--tertiary-text-color);
+}
+
+.emailLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color .15s ease;
+}
+
+.emailLink:hover,
+.emailLink:focus-visible {
+  color: var(--primary-text-color);
+  outline: none;
+}
+
+.icons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  color: var(--tertiary-text-color);
+  transition: background .15s ease, color .15s ease;
+}
+
+.iconBtn:hover,
+.iconBtn:focus-visible {
+  color: var(--primary-text-color);
+  background: rgba(255,255,255,0.06);
+  outline: none;
+}
+
+.rightCol {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.linkList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  text-align: right;
+}
+
+.link {
+  font-family: var(--font-outfit);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--tertiary-text-color);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--primary-text-color);
+  outline: none;
+}
+
+/* Tablet: same three-column but smaller fonts */
+@media (max-width: 1024px) {
+  .layout {
+    column-gap: 32px;
+  }
+  .title,
+  .email {
+    font-size: 24px;
+  }
+  .linkList {
+    gap: 16px;
+  }
+}
+
+/* Mobile: stack everything, center-align */
+@media (max-width: 640px) {
+  .layout {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+  .leftCol {
+    align-items: center;
+  }
+  .title,
+  .email {
+    text-align: center;
+  }
+  .icons {
+    justify-content: center;
+  }
+  .rightCol {
+    justify-content: center;
+  }
+  .linkList {
+    text-align: center;
+    gap: 14px;
+  }
+}
