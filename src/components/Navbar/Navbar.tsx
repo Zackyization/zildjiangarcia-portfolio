@@ -26,7 +26,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="text-sm text-[var(--primary-color)] font-outfit font-bold"
+          className={`${styles.navLink} ${styles.navLinkPrimary} text-sm text-[var(--primary-color)] font-outfit font-bold`}
         >
           Zildjian G.
         </Link>
@@ -35,7 +35,7 @@ export function Navbar() {
         <nav className="hidden sm:flex items-center gap-8 text-sm font-outfit font-bold">
           <Link
             href="/works"
-            className="hover:text-white text-[var(--secondary-text-color)]"
+            className={`${styles.navLink} hover:text-white text-[var(--secondary-text-color)]`}
             title="Check out my works!"
           >
             Works
@@ -44,7 +44,7 @@ export function Navbar() {
             href="https://github.com/Zackyization"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white text-[var(--secondary-text-color)]"
+            className={`${styles.navLink} hover:text-white text-[var(--secondary-text-color)]`}
             title="Check out my Github!"
           >
             Github
@@ -53,14 +53,14 @@ export function Navbar() {
             href="https://www.linkedin.com/in/zildjian-aquino-garcia"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white text-[var(--secondary-text-color)]"
+            className={`${styles.navLink} hover:text-white text-[var(--secondary-text-color)]`}
             title="Check out my LinkedIn profile!"
           >
             LinkedIn
           </a>
           <a
             href="mailto:zildjiangarciaa@gmail.com"
-            className="hover:text-white text-[var(--secondary-text-color)]"
+            className={`${styles.navLink} hover:text-white text-[var(--secondary-text-color)]`}
             title="zildjiangarciaa@gmail.com"
           >
             Email

@@ -1,1 +1,33 @@
-/* TODO: Create the styling for the Navbar */
+.navLink {
+  position: relative;
+  padding-bottom: 2px; /* space for underline */
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--color-primary-text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 260ms ease;
+}
+
+.navLinkPrimary::after {
+  background: var(--primary-color);
+}
+
+.navLink:hover::after,
+.navLink:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Optional: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .navLink::after {
+    transition: none;
+  }
+}
