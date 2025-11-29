@@ -1,8 +1,8 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import { TiDownload } from "react-icons/ti";
 import { SiGithub } from "react-icons/si";
 import { AvailabilityIndicator } from "@/components/home/AvailabilityIndicator/AvailabilityIndicator";
+import { HeroImage } from "@/components/HeroImage/HeroImage";
 
 export const metadata: Metadata = {
   title: "Zildjian Garcia - Budding Frontend Developer",
@@ -16,22 +16,26 @@ export default function Home() {
       {/* TODO: Markup for the background memphis graphics that can do the parallax moving based on mouse movement */}
       <div className="mx-auto flex max-w-7xl px-6 py-4">
         <div className="grid grid-cols-4 md:grid-cols-12 gap-4">
-
-          {/* Introductory text */}
           <div className="col-span-4 md:col-span-6">
-            <p className="font-outfit text-xl">Hello there!</p>
-            <p className="font-outfit text-xl">
-              My name is <span className="text-primary">Zildjian</span>, but you
-              can call me <span className="text-primary">Zee Jay</span>.
-            </p>
-            <h1 className="jumbotron text-highlighted-text mt-4">
-              Budding Frontend Developer
-            </h1>
-            <span className="flex flex-row justify-between mt-6">
-              <p className="font-outfit text-xl font-bold uppercase tracking-[7px] text-tertiary-text">
-                Based in Singapore
+            {/* Introductory text */}
+            <div className="order-1 md:order-0">
+              <p className="font-outfit text-xl">Hello there!</p>
+              <p className="font-outfit text-xl">
+                My name is <span className="text-primary">Zildjian</span>, but
+                you can call me <span className="text-primary">Zee Jay</span>.
               </p>
-            </span>
+              <h1 className="jumbotron text-highlighted-text mt-4">
+                Budding Frontend Developer
+              </h1>
+              <span className="flex flex-row justify-between mt-6">
+                <p className="font-outfit text-xl font-bold uppercase tracking-[7px] text-tertiary-text">
+                  Based in Singapore
+                </p>
+              </span>
+            </div>
+
+            {/* Hero image - ONLY visible on mobile */}
+            <HeroImage className="lg:hidden mt-8 items-center" />
 
             {/* Resume download & Github links */}
             <div className="mt-28">
@@ -83,63 +87,8 @@ export default function Home() {
             </article>
           </div>
 
-          <div className="col-span-4 md:col-span-6 flex flex-col justify-center">
-            {/* Hero image */}
-            <div className="flex flex-row justify-center">
-              <Image
-                src="/assets/home/zj_blob.png"
-                alt="Photo of Zildjian"
-                width={600}
-                height={600}
-                className="h-auto w-5/6 object-cover"
-                role="image"
-                priority
-              />{" "}
-            </div>
-            {/* Technology icons */}
-            <div className="mt-8" aria-label="Technologies I work with">
-              <div className="flex justify-center">
-                <Image
-                  src="/assets/icons/material-icon-theme_vue.svg"
-                  alt="Vue"
-                  width={36}
-                  height={36}
-                  className="transition-transform hover:scale-110 mr-16"
-                />
-                <Image
-                  src="/assets/icons/devicon_react.svg"
-                  alt="React"
-                  width={36}
-                  height={36}
-                  className="transition-transform hover:scale-110"
-                />
-                <Image
-                  src="/assets/icons/material-icon-theme_angular.svg"
-                  alt="Angular"
-                  width={36}
-                  height={36}
-                  className="transition-transform hover:scale-110 ml-16"
-                />
-              </div>
-
-              <div className="flex justify-center mt-8">
-                <Image
-                  src="/assets/icons/material-icon-theme_figma.svg"
-                  alt="Figma"
-                  width={36}
-                  height={36}
-                  className="transition-transform hover:scale-110 mr-8"
-                />
-                <Image
-                  src="/assets/icons/logos_adobe-illustrator.svg"
-                  alt="Adobe Illustrator"
-                  width={36}
-                  height={36}
-                  className="transition-transform hover:scale-110 ml-8"
-                />
-              </div>
-            </div>
-          </div>
+          {/* Hero image - ONLY visible on desktop, right column */}
+          <HeroImage className="hidden md:flex col-span-1 md:col-span-6 justify-center" />
         </div>
       </div>
     </div>

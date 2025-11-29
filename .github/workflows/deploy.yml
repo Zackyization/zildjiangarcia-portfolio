@@ -1,0 +1,40 @@
+# TODO: Finalzie this deploy.yml file when the time is right
+name: Build and Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Docker image
+        run: docker build --target prod -t portfolio-prod .
+
+      - name: Export Next.js static files
+        run: pnpm build
+
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@v2.0.0
+        with:
+          args: deploy --dir=.next/static --prod --site=$NETLIFY_SITE_ID
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

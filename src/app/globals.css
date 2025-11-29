@@ -77,3 +77,11 @@ body {
   color: var(--primary-text-color);
   font-family: var(--font-sulphur-point), Arial, Helvetica, sans-serif;
 }
+
+
+/* Mobile breakpoint */
+@media (max-width: 640px) {
+  .jumbotron {
+    font-size: 48px;
+  }
+}
