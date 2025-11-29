@@ -24,7 +24,9 @@ export function Footer() {
             </p>
           </div>
 
-          <p className="hidden md:block font-bold text-muted-text">Website made by Zildjian Garcia</p>
+          <p className="hidden md:block font-bold text-muted-text">
+            Website made by Zildjian Garcia
+          </p>
         </div>
 
         <div className={styles.icons} aria-label="Social links">
@@ -58,12 +60,12 @@ export function Footer() {
         <nav className={styles.rightCol} aria-label="Footer navigation">
           <ul className={styles.linkList}>
             <li>
-              <Link href="/" className={styles.link}>
+              <Link href="/" className={styles.link} title="Home Page">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/works" className={styles.link}>
+              <Link href="/works" className={styles.link} title="Check out my works!">
                 Works
               </Link>
             </li>
@@ -73,6 +75,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className={styles.link}
+                title="Check out my Github!"
               >
                 Github
               </a>
@@ -83,6 +86,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className={styles.link}
+                title="Check out my LinkedIn profile!"
               >
                 LinkedIn
               </a>
@@ -91,6 +95,7 @@ export function Footer() {
               <a
                 href="mailto:zildjiangarciaa@gmail.com"
                 className={styles.link}
+                title="zildjiangarciaa@gmail.com"
               >
                 Email
               </a>

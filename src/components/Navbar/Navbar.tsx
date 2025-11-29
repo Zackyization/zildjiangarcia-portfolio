@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Navbar.module.css";
 import { useEffect, useRef, useState } from "react";
 
@@ -22,20 +23,23 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="w-full sticky top-0 z-50">
+    <header className="w-full sticky top-0 z-50 bg-background">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className={`${styles.navLink} ${styles.navLinkPrimary} text-sm text-[var(--primary-color)] font-outfit font-bold`}
+          className={`${styles.navLink} ${styles.navLinkPrimary} text-sm text-primary font-outfit font-bold`}
         >
           Zildjian G.
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden sm:flex items-center gap-8 text-sm font-outfit font-bold" role="navigation">
+        <nav
+          className="hidden sm:flex items-center gap-8 text-sm font-outfit font-bold"
+          role="navigation"
+        >
           <Link
             href="/works"
-            className={`${styles.navLink} hover:text-white text-[var(--secondary-text-color)]`}
+            className={`${styles.navLink} hover:text-white text-secondary-text`}
             title="Check out my works!"
           >
             Works
@@ -44,7 +48,7 @@ export function Navbar() {
             href="https://github.com/Zackyization"
             target="_blank"
             rel="noreferrer"
-            className={`${styles.navLink} hover:text-white text-[var(--secondary-text-color)]`}
+            className={`${styles.navLink} hover:text-white text-secondary-text`}
             title="Check out my Github!"
           >
             Github
@@ -53,14 +57,14 @@ export function Navbar() {
             href="https://www.linkedin.com/in/zildjian-aquino-garcia"
             target="_blank"
             rel="noreferrer"
-            className={`${styles.navLink} hover:text-white text-[var(--secondary-text-color)]`}
+            className={`${styles.navLink} hover:text-white text-secondary-text`}
             title="Check out my LinkedIn profile!"
           >
             LinkedIn
           </a>
           <a
             href="mailto:zildjiangarciaa@gmail.com"
-            className={`${styles.navLink} hover:text-white text-[var(--secondary-text-color)]`}
+            className={`${styles.navLink} hover:text-white text-secondary-text`}
             title="zildjiangarciaa@gmail.com"
           >
             Email
@@ -68,7 +72,6 @@ export function Navbar() {
         </nav>
 
         {/* Mobile burger */}
-        {/* TODO: Replace this with your own custom burger icon design */}
         <button
           type="button"
           aria-label="Open menu"
@@ -77,14 +80,13 @@ export function Navbar() {
           onClick={() => setOpen(true)}
           className="sm:hidden inline-flex h-10 w-10 items-center justify-center rounded-md text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
         >
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M4 6h16M4 12h16M4 18h16"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <Image
+            src="/assets/icons/burger_menu.svg"
+            alt=""
+            width={30}
+            height={18}
+            aria-hidden="true"
+          />
         </button>
 
         {/* Overlay */}
@@ -101,7 +103,7 @@ export function Navbar() {
         id="mobile-menu"
         role="dialog"
         aria-modal="true"
-        className={`fixed inset-y-0 right-0 z-50 w-[84%] max-w-xs bg-[var(--background)] p-6 shadow-2xl outline-none transition-transform duration-300 will-change-transform ${
+        className={`fixed inset-y-0 right-0 z-50 w-[84%] max-w-xs bg-background p-6 shadow-2xl outline-none transition-transform duration-300 will-change-transform ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

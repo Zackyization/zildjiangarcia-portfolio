@@ -13,6 +13,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary-color);
   --color-primary-text: var(--primary-text-color);
   --color-secondary-text: var(--secondary-text-color);
   --color-tertiary-text: var(--tertiary-text-color);
@@ -30,21 +31,14 @@
 }
 
 .jumbotron {
-  font-size: 72pt;
+  font-size: 72px;
   font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+  line-height: 1;
 }
 
 h1,
 h2 h3 {
   font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
-}
-
-h1 {
-  font-size: 56pt;
-}
-
-h2 {
-  font-size: 40pt;
 }
 
 h1,
@@ -53,7 +47,6 @@ h2 {
 }
 
 h3 {
-  font-size: 16pt;
   font-weight: 500;
 }
 
@@ -65,17 +58,17 @@ h6 {
 }
 
 .body-large {
-  font-size: 16pt;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .body-medium {
-  font-size: 14pt;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .body-small {
-  font-size: 12pt;
+  font-size: 12px;
   font-weight: 700;
 }
 
