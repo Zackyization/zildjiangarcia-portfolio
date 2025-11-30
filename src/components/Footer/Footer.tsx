@@ -6,7 +6,7 @@ import styles from "./Footer.module.css";
 export function Footer() {
   return (
     <footer
-      className={`${styles.footer} max-w-7xl mx-auto px-6 py-4`}
+      className={`${styles.footer} max-w-7xl mx-auto px-6 py-4 mt-24`}
       role="contentinfo"
     >
       <div className={`${styles.layout}`}>

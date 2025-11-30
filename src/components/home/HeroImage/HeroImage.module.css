@@ -1,0 +1,35 @@
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floatingIcon {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.floatingIcon1 {
+  animation-delay: 0s;
+}
+
+.floatingIcon2 {
+  animation-delay: 1s;
+}
+
+.floatingIcon3 {
+  animation-delay: 2s;
+}
+
+.floatingIcon4 {
+  animation-delay: 0.5s;
+}
+
+.floatingIcon5 {
+  animation-delay: 1.5s;
+}

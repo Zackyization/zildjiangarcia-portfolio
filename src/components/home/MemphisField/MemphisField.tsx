@@ -5,50 +5,51 @@ import { useEffect, useRef } from "react";
 
 const MEMPHIS_ASSETS = [
   {
+    // TODO: Add breakpoints for the mobile coordinates for the memphis graphics
     src: "/assets/home/memphis/memphis1.svg",
-    className: "top-[22px] left-[702px]",
+    className: "md:top-[10px] md:left-[532px] lg:top-[22px] lg:left-[702px]",
     depth: 4,
     width: 152.026,
     height: 95.169,
   },
   {
     src: "/assets/home/memphis/memphis2.svg",
-    className: "bottom-[280px] left-[648px]",
+    className: "md:bottom-[865px] md:left-[42px] lg:bottom-[280px] lg:left-[648px]",
     depth: 6,
     width: 286.943,
     height: 10.097,
   },
   {
     src: "/assets/home/memphis/memphis3.svg",
-    className: "bottom-[-26px] left-[148px]",
+    className: "md:bottom-[420px] md:left-[52px] lg:bottom-[-26px] lg:left-[148px]",
     depth: 8,
     width: 249.239,
     height: 249.422,
   },
   {
     src: "/assets/home/memphis/memphis4.svg",
-    className: "right-[720px] bottom-[12px]",
+    className: "md:right-[78px] md:bottom-[382px] lg:right-[720px] lg:bottom-[12px]",
     depth: 5,
     width: 112.164,
     height: 138.118,
   },
   {
     src: "/assets/home/memphis/memphis5.svg",
-    className: "right-[224px] bottom-[35px]",
+    className: "md:right-[50px] md:bottom-[8px] lg:right-[224px] lg:bottom-[35px]",
     depth: 7,
     width: 21.533,
     height: 290.778,
   },
   {
     src: "/assets/home/memphis/memphis6.svg",
-    className: "top-[56px] right-[735px]",
+    className: "md:top-[105px] md:right-[45px] lg:top-[56px] lg:right-[735px]",
     depth: 3,
     width: 18.502,
     height: 243.695,
   },
   {
     src: "/assets/home/memphis/memphis7.svg",
-    className: "top-[140px] right-[120px]",
+    className: "md:top-[285px] md:right-[126px] lg:top-[140px] lg:right-[120px]",
     depth: 9,
     width: 274.512,
     height: 92.977,

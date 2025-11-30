@@ -13,14 +13,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen items-center justify-center">
-      {/* CURRENT: TODO: Markup for the background memphis graphics that can do the parallax moving based on mouse movement */}
+    <div className="relative flex min-h-screen items-center justify-center overflow-x-hidden">
       <MemphisField />
       <div className="relative flex max-w-7xl px-6 py-4">
         <div className="grid grid-cols-4 md:grid-cols-12 gap-4">
-          <div className="col-span-4 md:col-span-6">
+          <div className="col-span-4 md:col-span-12 lg:col-span-6 relative z-10">
             {/* Introductory text */}
-            <div className="order-1 md:order-0">
+            <div>
               <p className="font-outfit text-xl">Hello there!</p>
               <p className="font-outfit text-xl">
                 My name is <span className="text-primary">Zildjian</span>, but
@@ -37,7 +36,7 @@ export default function Home() {
             </div>
 
             {/* Hero image - ONLY visible on mobile */}
-            <HeroImage className="lg:hidden mt-8 items-center" />
+            <HeroImage className="lg:hidden items-center mt-8 md:-mt-24 md:-mr-36 relative z-0" />
 
             {/* Resume download & Github links */}
             <div className="mt-28">
@@ -67,8 +66,8 @@ export default function Home() {
             </div>
 
             {/* Short write-up */}
-            <article className="mt-8">
-              <section>
+            <article className="mt-8 flex justify-center">
+              <section className="w-full md:w-3/4 lg:w-full">
                 <h2 className="uppercase font-outfit text-lg text-tertiary-text">
                   Currently a senior Nanyang Technological University Computer
                   Science Undergraduate
@@ -90,7 +89,7 @@ export default function Home() {
           </div>
 
           {/* Hero image - ONLY visible on desktop, right column */}
-          <HeroImage className="hidden md:flex col-span-1 md:col-span-6 justify-center" />
+          <HeroImage className="hidden lg:flex col-span-1 md:col-span-6 justify-center" />
         </div>
       </div>
     </div>
