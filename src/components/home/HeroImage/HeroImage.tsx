@@ -18,7 +18,7 @@ export function HeroImage({ className = "" }: HeroImageProps) {
         />
       </div>
       <div className="mt-8" aria-label="Technologies I work with">
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-4">
           <Image
             src="/assets/icons/material-icon-theme_vue.svg"
             alt="Vue"

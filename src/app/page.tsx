@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { TiDownload } from "react-icons/ti";
 import { SiGithub } from "react-icons/si";
 import { AvailabilityIndicator } from "@/components/home/AvailabilityIndicator/AvailabilityIndicator";
-import { HeroImage } from "@/components/HeroImage/HeroImage";
+import { HeroImage } from "@/components/home/HeroImage/HeroImage";
+import { MemphisField } from "@/components/home/MemphisField/MemphisField";
 
 export const metadata: Metadata = {
   title: "Zildjian Garcia - Budding Frontend Developer",
@@ -12,9 +13,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      {/* TODO: Markup for the background memphis graphics that can do the parallax moving based on mouse movement */}
-      <div className="mx-auto flex max-w-7xl px-6 py-4">
+    <div className="relative flex min-h-screen items-center justify-center">
+      {/* CURRENT: TODO: Markup for the background memphis graphics that can do the parallax moving based on mouse movement */}
+      <MemphisField />
+      <div className="relative flex max-w-7xl px-6 py-4">
         <div className="grid grid-cols-4 md:grid-cols-12 gap-4">
           <div className="col-span-4 md:col-span-6">
             {/* Introductory text */}
