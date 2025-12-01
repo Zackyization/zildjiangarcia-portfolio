@@ -8,7 +8,7 @@ interface HeroImageProps {
 export function HeroImage({ className = "" }: HeroImageProps) {
   return (
     <div className={`flex flex-col ${className}`}>
-      <div className="inline-block w-3/4 lg:w-auto lg:flex flex-row justify-center">
+      <div className="inline-block w-full md:w-3/4 lg:w-auto lg:flex flex-row justify-center">
         <Image
           src="/assets/home/zj_blob.png"
           alt="Photo of Zildjian"
@@ -20,7 +20,6 @@ export function HeroImage({ className = "" }: HeroImageProps) {
       </div>
       <div className="mt-8" aria-label="Technologies I work with">
         <div className="flex justify-center gap-4">
-          {/* TODO: Do a similar floating item effect (inspired by https://codepen.io/MarioDesigns/pen/woJgeo) */}
           <Image
             src="/assets/icons/material-icon-theme_vue.svg"
             alt="Vue"

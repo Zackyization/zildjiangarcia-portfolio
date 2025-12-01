@@ -29,7 +29,7 @@ export default function Home() {
                 Budding Frontend Developer
               </h1>
               <span className="flex flex-row justify-between mt-6">
-                <p className="font-outfit text-xl font-bold uppercase tracking-[7px] text-tertiary-text">
+                <p className="font-outfit text-xl font-bold uppercase tracking-[7px] text-tertiary-text text-right md:text-left">
                   Based in Singapore
                 </p>
               </span>
@@ -48,7 +48,7 @@ export default function Home() {
                   href="/assets/Zildjian%20Garcia%20Resume%202025.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg px-6 py-3 font-outfit text-2xl font-bold text-primary transition-colors hover:bg-[var(--primary-color)]/5"
+                  className="inline-flex items-center gap-2 rounded-lg px-6 py-3 font-outfit text-2xl font-bold text-primary transition-colors hover:bg-(--primary-color)/5"
                 >
                   <TiDownload size={32} aria-hidden="true" />
                   Resume
