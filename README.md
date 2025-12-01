@@ -70,8 +70,6 @@ pnpm start
 - 🎨 Tailwind CSS v4 with typography plugin
 - 🔥 Hot Module Replacement in development
 - ⚡ React Compiler for optimized builds
-- 📝 MDX support for content
-- 🌗 Dark mode support
 - 🐳 Docker support for dev and prod
 
 ```bash

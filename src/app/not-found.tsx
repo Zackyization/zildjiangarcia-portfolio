@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Zildjian Garcia - Page Not Found",
-  description: "The page you're looking for doesn't exist.",
-};
+export const metadata = generatePageMetadata({
+  title: "Page Not Found",
+  description:
+    "The page you're looking for doesn't exist. Return to the homepage to explore my portfolio.",
+  path: "/404",
+  keywords: ["404", "Page Not Found"],
+});
 
 export default function NotFound() {
   return (

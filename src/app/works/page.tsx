@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { WorksGrid } from "@/components/works/WorksGrid/WorksGrid";
+import { generatePageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Zildjian Garcia - Works",
-  description:
-    "Check out the projects I've built - web development and UI/UX design work.",
-};
+export const metadata = generatePageMetadata({
+  title: "Works",
+  description: "Check out the projects I've built - web development and UI/UX design work.",
+  path: "/works",
+  keywords: ["Web Development", "UI/UX", "Projects", "Portfolio", "React", "Next.js"],
+});
 
 // TODO: Replace with actual data from CMS or database
 const WORKS_DATA = [
@@ -24,7 +25,6 @@ export default function WorksPage() {
   return (
     <div className="min-h-screen px-6 py-12 max-w-7xl mx-auto">
       {/* Back button */}
-      {/* TODO: Put the same hover background effect as the home page Resume and Github buttons, you'll know what I'm talking about */}
       <Link
         href="/"
         className="inline-flex items-center rounded-lg gap-2 px-6 py-3 text-tertiary-text font-outfit mb-8 transition-colors hover:bg-white/5"
