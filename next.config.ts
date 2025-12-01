@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
-  output: "standalone", // Enable for Docker production builds
+  images: {
+    unoptimized: true, // Required for static export
+  },
+  // Remove trailing slashes for cleaner URLs
+  trailingSlash: false,
 };
 
 export default nextConfig;

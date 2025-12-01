@@ -1,8 +1,10 @@
-# TODO: Finalzie this deploy.yml file when the time is right
 name: Build and Deploy to Netlify
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -23,18 +25,21 @@ jobs:
         run: npm install -g pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-      - name: Build Docker image
-        run: docker build --target prod -t portfolio-prod .
-
-      - name: Export Next.js static files
+      - name: Build Next.js site
         run: pnpm build
 
       - name: Deploy to Netlify
-        uses: netlify/actions/cli@v2.0.0
+        uses: nwtgck/actions-netlify@v3.0
         with:
-          args: deploy --dir=.next/static --prod --site=$NETLIFY_SITE_ID
+          publish-dir: './.next'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 10
