@@ -57,7 +57,7 @@ export default function Hall3WebsitePage() {
 
         {/* Page title */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit text-white mb-12 text-center">
-          Hall 3 Website Project
+          Hall 3 Website
         </h1>
 
         {/* Project details and write-up go here */}
