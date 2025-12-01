@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ac348e16-9f01-4e43-8739-2e51f4c8a711/deploy-status)](https://app.netlify.com/projects/zildjiangarcia/deploys)
+
 This repository contains the working files for my portfolio website. It is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
