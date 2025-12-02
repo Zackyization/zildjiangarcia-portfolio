@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "Zildjian Garcia Portfolio",
     images: [
       {
-        url: "/og-image.png", // Create this image
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Zildjian Garcia - Frontend Developer",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Zildjian Garcia - Budding Frontend Developer",
     description:
       "Portfolio website of Zildjian Garcia, a budding frontend developer based in Singapore.",
-    images: ["/og-image.png"],
+    images: ["/og-image.webp"],
   },
   robots: {
     index: true,
