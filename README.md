@@ -68,7 +68,6 @@ pnpm start
 - **Styling**: Tailwind CSS v4
 - **Fonts**: [Outfit](https://fonts.google.com/specimen/Outfit?query=outfit) & [Sulphur Point](https://fonts.google.com/specimen/Sulphur+Point?query=sulphur) (via next/font)
 - **React**: React 19 with React Compiler enabled
-- **MDX**: @mdx-js/loader for Markdown content
 
 ## Features
 
