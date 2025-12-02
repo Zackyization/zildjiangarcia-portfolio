@@ -8,11 +8,11 @@ import { MemphisField } from "@/components/home/MemphisField/MemphisField";
 export const metadata: Metadata = {
   title: "Zildjian Garcia - Budding Frontend Developer",
   description:
-    "Portfolio website of Zildjian Garcia, a budding frontend developer based in Singapore.",
+    "Hey there, I'm Zildjian but you can call me Zee Jay, check out my portfolio website!",
   openGraph: {
     title: "Zildjian Garcia - Budding Frontend Developer",
     description:
-      "Portfolio website of Zildjian Garcia, a budding frontend developer based in Singapore.",
+      "Hey there, I'm Zildjian but you can call me Zee Jay, check out my portfolio website!",
     url: "zildjiangarcia.dev",
     siteName: "Zildjian Garcia Portfolio",
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Zildjian Garcia - Budding Frontend Developer",
     description:
-      "Portfolio website of Zildjian Garcia, a budding frontend developer based in Singapore.",
+      "Hey there, I'm Zildjian but you can call me Zee Jay, check out my portfolio website!",
     images: ["/og-image.webp"],
   },
   robots: {
