@@ -2,6 +2,7 @@ import Link from "next/link";
 import { generatePageMetadata } from "@/lib/metadata";
 import { WorkStructuredData } from "@/components/StructuredData/StructuredData";
 import { Breadcrumb } from "@/components/Breadcrumb/Breadcrumb";
+import { FaCalendar } from "react-icons/fa";
 
 export const metadata = generatePageMetadata({
   title: "Hall 3 Website",
@@ -56,16 +57,23 @@ export default function Hall3WebsitePage() {
         </Link>
 
         {/* Page title */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit text-white mb-12 text-center">
-          Hall 3 Website
-        </h1>
+        <div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit text-white text-left">
+            Hall 3 Website
+          </h1>
+          {/* CURRENT: TODO: Insert the chips from the works page */}
+          {/* LEFT OFF HERE: Work on implementing the content, look at Github copilot */}
+          <p className="mt-4 text-tertiary-text">Published December 3, 2025</p>
+        </div>
 
         {/* Project details and write-up go here */}
-        <div>
+        <div className="grid grid-cols-4 md:grid-cols-12 gap-4">
           {/* TODO: Add project description, images, tags, and write-up */}
-          <h2 className="text-center font-outfit font-bold text-2xl">
-            Write-up coming soon!
-          </h2>
+          {/* Write-Up Content */}
+          <div className="col-span-4 md:col-span-12 lg:col-span-6">
+            {/* TODO: Insert the links to the Website, the github repo and the Figma mockup */}
+
+          </div>
         </div>
       </div>
     </>

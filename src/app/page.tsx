@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "Hey there, I'm Zildjian but you can call me Zee Jay, check out my portfolio website!",
     url: "zildjiangarcia.dev",
-    siteName: "Zildjian Garcia Portfolio",
+    siteName: "Zildjian Garcia's Portfolio",
     images: [
       {
         url: "/og-image.webp",

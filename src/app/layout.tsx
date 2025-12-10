@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://zildjiangarcia.dev",
-    siteName: "Zildjian Garcia Portfolio",
+    siteName: "Zildjian Garcia's Portfolio",
     images: [
       {
         url: "/og-image.webp",
