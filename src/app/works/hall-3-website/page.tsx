@@ -68,7 +68,7 @@ export default function Hall3WebsitePage() {
         <h1 className="text-4xl text-center md:text-start md:text-5xl font-bold font-outfit text-white">
           {projectData.title}
         </h1>
-        ,{/* Tags */}
+        {/* Tags */}
         <div className="mt-4 flex gap-2 justify-center md:justify-start flex-wrap">
           {projectData.tags.map((tag) => (
             <span
