@@ -1,25 +1,22 @@
 import Link from "next/link";
 import { WorksGrid } from "@/components/works/WorksGrid/WorksGrid";
 import { generatePageMetadata } from "@/lib/metadata";
+import { WORKS_DATA } from "@/lib/works-data";
 
 export const metadata = generatePageMetadata({
   title: "Works",
-  description: "Check out the projects I've built - web development and UI/UX design work.",
+  description:
+    "Check out the projects I've built - web development and UI/UX design work.",
   path: "/works",
-  keywords: ["Web Development", "UI/UX", "Projects", "Portfolio", "React", "Next.js"],
+  keywords: [
+    "Web Development",
+    "UI/UX",
+    "Projects",
+    "Portfolio",
+    "React",
+    "Next.js",
+  ],
 });
-
-// TODO: Replace with actual data from CMS or database
-const WORKS_DATA = [
-  {
-    id: "1",
-    title: "Hall 3 Website",
-    image: "/assets/works/hall3_website_preview.png",
-    tags: ["Web Development", "UI/UX"],
-    slug: "hall-3-website",
-  },
-  // Add more projects as needed
-];
 
 export default function WorksPage() {
   return (
@@ -27,7 +24,7 @@ export default function WorksPage() {
       {/* Back button */}
       <Link
         href="/"
-        className="inline-flex items-center rounded-lg gap-2 px-6 py-3 text-tertiary-text font-outfit mb-8 transition-colors hover:bg-white/5"
+        className="inline-flex items-center rounded-lg gap-2 text-tertiary-text font-outfit mb-8 transition-colors hover:bg-white/5"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
           <path
