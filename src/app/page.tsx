@@ -80,7 +80,7 @@ export default function Home() {
               </div>
               <div className="mt-4 flex justify-evenly">
                 <a
-                  href="/assets/Zildjian%20Garcia%20Resume%202025.pdf"
+                  href="/assets/Zildjian%20Garcia%20Resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg px-6 py-3 font-outfit text-2xl font-bold text-primary transition-colors hover:bg-(--primary-color)/5"
