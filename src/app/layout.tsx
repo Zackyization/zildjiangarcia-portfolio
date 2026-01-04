@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "Zildjian Garcia - %s",
   },
   description:
-    "Hey there, I'm Zildjian but you can call me Zee Jay, check out my portfolio website!",
+    "Hey there, I'm Zildjian but you can call me Zee Jay, a Frontend lover based in Singapore, check out my portfolio website!",
   keywords: [
     "Frontend Developer",
     "Software Engineer",

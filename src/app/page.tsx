@@ -8,11 +8,11 @@ import { MemphisField } from "@/components/home/MemphisField/MemphisField";
 export const metadata: Metadata = {
   title: "Zildjian Garcia - Budding Frontend Developer",
   description:
-    "Hey there, I'm Zildjian but you can call me Zee Jay, check out my portfolio website!",
+    "Hey there, I'm Zildjian but you can call me Zee Jay, a Frontend lover based in Singapore, check out my portfolio website!",
   openGraph: {
     title: "Zildjian Garcia - Budding Frontend Developer",
     description:
-      "Hey there, I'm Zildjian but you can call me Zee Jay, check out my portfolio website!",
+      "Hey there, I'm Zildjian but you can call me Zee Jay, a Frontend lover based in Singapore, check out my portfolio website!",
     url: "zildjiangarcia.dev",
     siteName: "Zildjian Garcia's Portfolio",
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Zildjian Garcia - Budding Frontend Developer",
     description:
-      "Hey there, I'm Zildjian but you can call me Zee Jay, check out my portfolio website!",
+      "Hey there, I'm Zildjian but you can call me Zee Jay, a Frontend lover based in Singapore, check out my portfolio website!",
     images: ["/og-image.webp"],
   },
   robots: {
@@ -104,8 +104,7 @@ export default function Home() {
             <article className="mt-8 flex justify-center">
               <section className="w-full md:w-3/4 lg:w-full">
                 <h2 className="uppercase font-outfit text-lg text-tertiary-text">
-                  Currently a senior Nanyang Technological University Computer
-                  Science Undergraduate
+                  Nanyang Technological University Computer Fresh Graduate
                 </h2>
                 <p className="text-justify mt-4 text-muted-text">
                   Hello! I enjoy writing code, making UI/UX designs and helping
