@@ -76,7 +76,7 @@ export default function Home() {
             {/* Resume download & Github links */}
             <div className="mt-28">
               <div className="flex justify-center">
-                <AvailabilityIndicator status="actively-looking" />
+                <AvailabilityIndicator status="unavailable" />
               </div>
               <div className="mt-4 flex justify-evenly">
                 <a
