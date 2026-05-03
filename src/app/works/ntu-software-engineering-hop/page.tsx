@@ -9,18 +9,17 @@ import { CgFigma } from "react-icons/cg";
 import { IoLogoGithub } from "react-icons/io";
 import { FaGlobe } from "react-icons/fa";
 
-const projectData = getWorkBySlug("hall-3-website");
+const projectData = getWorkBySlug("ntu-software-engineering-hop");
 
 if (!projectData) {
   notFound(); // Navigate to 404 page if project not found
 }
 
-// TODO: See how to go about removing the page metadata code below to make way for the dynamic meta page generation, then continue working on getting the ntu software engineering page to show
 export const metadata = generatePageMetadata({
   title: projectData.title,
   description: projectData.description || "",
-  path: "/works/hall-3-website",
-  ogImage: "/assets/works/hall-3-website/og-hall3.jpg", // TODO: Remove ogImage and use dynamic image generation instead
+  path: "/works/ntu-software-engineering-hop",
+  ogImage: "/assets/works/ntu-software-engineering-hop/og-hall3.jpg",
   keywords: projectData.tags,
 });
 

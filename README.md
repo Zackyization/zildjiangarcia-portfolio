@@ -95,3 +95,4 @@ docker-compose down
 # Remove volumes and rebuild
 docker-compose down -v && docker-compose build
 ```
+zr
