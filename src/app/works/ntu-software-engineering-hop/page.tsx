@@ -11,22 +11,18 @@ import { FaGlobe } from "react-icons/fa";
 
 const projectData = getWorkBySlug("ntu-software-engineering-hop");
 
-if (!projectData) {
-  notFound(); // Navigate to 404 page if project not found
-}
-
 export const metadata = generatePageMetadata({
-  title: projectData.title,
-  description: projectData.description || "",
+  title: projectData?.title || "Project Not Found",
+  description: projectData?.description || "",
   path: "/works/ntu-software-engineering-hop",
   ogImage: "/assets/works/ntu-software-engineering-hop/og-hall3.jpg",
-  keywords: projectData.tags,
+  keywords: projectData?.tags,
 });
 
 export default function Hall3WebsitePage() {
   // Add early return if projectData is undefined
   if (!projectData) {
-    return <div>Project not found.</div>;
+    return notFound();
   }
 
   return (
@@ -245,41 +241,7 @@ export default function Hall3WebsitePage() {
         {/* Mobile Description - Shows below images on mobile */}
         <div className="lg:hidden mt-8">
           <p className="text-muted-text font-sulphur-point leading-relaxed text-justify">
-            Hall 3 is a university dormitory based in Nanyang Technological
-            University.
-            <br></br>
-            <br></br>
-            The NTU Hall 3 Official Website is a comprehensive platform designed
-            to showcase the vibrant community, events, and facilities of Hall 3
-            at Nanyang Technological University, Singapore. This project was
-            developed using Hugo, a fast static site generator, and deployed on
-            Netlify for seamless hosting and performance optimization.
-            <br></br>
-            <br></br>
-            The website serves as a central hub for Hall 3 residents,
-            prospective students, and visitors to explore:
-            <ul className="space-y-1 list-disc ml-8 text-left">
-              <li>Hall 3&apos;s history and crest</li>
-              <li>
-                Committees, sports teams, recreational groups and cultural
-                activities
-              </li>
-              <li>Contact information and location details</li>
-            </ul>
-            <br></br>
-            <br></br>
-            During my 2 year stay in Hall 3, I was part of the Hall Council and
-            held a publications role there. At some point, I was tasked with
-            creating a yearbook, which I didn&apos;t really have the passion to
-            make.
-            <br></br>
-            <br></br>
-            So to make up for it, I took the old Hall 3 website design and
-            revamped it. Making a website was more enjoyable for me to do then
-            getting on Indesign and making a whole yearbook.
-            <br></br>
-            <br></br>
-            Still never got around to touching the yearbook to this day, heh.
+            Write a paragraph about your work here.
           </p>
         </div>
       </div>
